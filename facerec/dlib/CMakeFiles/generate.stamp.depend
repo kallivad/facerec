@@ -1,0 +1,49 @@
+# CMake generation dependency list for this directory.
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/CMakeLists.txt
+C:/Program Files/CMake/share/cmake-3.6/Modules/GNUInstallDirs.cmake
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/cmake_utils/release_build_by_default
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/cmake_utils/use_cpp_11.cmake
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/cmake_utils/add_global_compiler_switch.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindGIF.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPNG.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindZLIB.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/SelectLibraryConfigurations.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakeParseArguments.cmake
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/cmake_utils/check_if_neon_available.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindJPEG.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakeParseArguments.cmake
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/cmake_utils/cmake_find_blas.txt
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckIncludeFile.c.in
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckIncludeFile.c.in
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckIncludeFile.c.in
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckTypeSize.c.in
+C:/Projects/ERT/Dlib/dlib-19.7/CMakeFiles/CheckTypeSize/SIZE_OF_VOID_PTR.c
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckFunctionExists.c
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindCUDA.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakeParseArguments.cmake
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/config.h.in
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/revision.h.in
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/cmake_utils/dlibConfig.cmake.in
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/WriteBasicConfigVersionFile.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/Projects/ERT/Dlib/dlib-19.7/dlib/cmake_utils/dlib.pc.in

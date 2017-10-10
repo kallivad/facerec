@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{E48D974F-3259-3F6E-8B43-E171EB3EC375}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>dlib</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\ERT\Dlib\dlib-19.7\dlib\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dlib.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dlib</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\ERT\Dlib\dlib-19.7\dlib\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">dlib.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">dlib</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\ERT\Dlib\dlib-19.7\dlib\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">dlib.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">dlib</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\ERT\Dlib\dlib-19.7\dlib\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">dlib.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">dlib</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;DLIB_DISABLE_ASSERTS;DLIB_JPEG_SUPPORT;DLIB_USE_BLAS;DLIB_USE_LAPACK;DLIB_PNG_SUPPORT;DLIB_JPEG_STATIC;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;DLIB_DISABLE_ASSERTS;DLIB_JPEG_SUPPORT;DLIB_USE_BLAS;DLIB_USE_LAPACK;DLIB_PNG_SUPPORT;DLIB_JPEG_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DLIB_DISABLE_ASSERTS;DLIB_JPEG_SUPPORT;DLIB_USE_BLAS;DLIB_USE_LAPACK;DLIB_PNG_SUPPORT;DLIB_JPEG_STATIC;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DLIB_DISABLE_ASSERTS;DLIB_JPEG_SUPPORT;DLIB_USE_BLAS;DLIB_USE_LAPACK;DLIB_PNG_SUPPORT;DLIB_JPEG_STATIC;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DLIB_DISABLE_ASSERTS;DLIB_JPEG_SUPPORT;DLIB_USE_BLAS;DLIB_USE_LAPACK;DLIB_PNG_SUPPORT;DLIB_JPEG_STATIC;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DLIB_DISABLE_ASSERTS;DLIB_JPEG_SUPPORT;DLIB_USE_BLAS;DLIB_USE_LAPACK;DLIB_PNG_SUPPORT;DLIB_JPEG_STATIC;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DLIB_DISABLE_ASSERTS;DLIB_JPEG_SUPPORT;DLIB_USE_BLAS;DLIB_USE_LAPACK;DLIB_PNG_SUPPORT;DLIB_JPEG_STATIC;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DLIB_DISABLE_ASSERTS;DLIB_JPEG_SUPPORT;DLIB_USE_BLAS;DLIB_USE_LAPACK;DLIB_PNG_SUPPORT;DLIB_JPEG_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng;C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Projects/ERT/Dlib/dlib-19.7/dlib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Projects/ERT/Dlib/dlib-19.7 -BC:/Projects/ERT/Dlib/dlib-19.7 --check-stamp-file C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/ERT/Dlib/dlib-19.7/dlib/CMakeLists.txt;C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\GNUInstallDirs.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\release_build_by_default;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\use_cpp_11.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\add_global_compiler_switch.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindGIF.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\check_if_neon_available.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\cmake_find_blas.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckTypeSize.c.in;C:\Projects\ERT\Dlib\dlib-19.7\CMakeFiles\CheckTypeSize\SIZE_OF_VOID_PTR.c;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.6\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\config.h.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\revision.h.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\dlibConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\dlib.pc.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Projects/ERT/Dlib/dlib-19.7/dlib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Projects/ERT/Dlib/dlib-19.7 -BC:/Projects/ERT/Dlib/dlib-19.7 --check-stamp-file C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/ERT/Dlib/dlib-19.7/dlib/CMakeLists.txt;C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\GNUInstallDirs.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\release_build_by_default;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\use_cpp_11.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\add_global_compiler_switch.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindGIF.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\check_if_neon_available.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\cmake_find_blas.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckTypeSize.c.in;C:\Projects\ERT\Dlib\dlib-19.7\CMakeFiles\CheckTypeSize\SIZE_OF_VOID_PTR.c;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.6\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\config.h.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\revision.h.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\dlibConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\dlib.pc.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Projects/ERT/Dlib/dlib-19.7/dlib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Projects/ERT/Dlib/dlib-19.7 -BC:/Projects/ERT/Dlib/dlib-19.7 --check-stamp-file C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/ERT/Dlib/dlib-19.7/dlib/CMakeLists.txt;C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\GNUInstallDirs.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\release_build_by_default;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\use_cpp_11.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\add_global_compiler_switch.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindGIF.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\check_if_neon_available.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\cmake_find_blas.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckTypeSize.c.in;C:\Projects\ERT\Dlib\dlib-19.7\CMakeFiles\CheckTypeSize\SIZE_OF_VOID_PTR.c;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.6\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\config.h.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\revision.h.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\dlibConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\dlib.pc.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Projects/ERT/Dlib/dlib-19.7/dlib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Projects/ERT/Dlib/dlib-19.7 -BC:/Projects/ERT/Dlib/dlib-19.7 --check-stamp-file C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/ERT/Dlib/dlib-19.7/dlib/CMakeLists.txt;C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\GNUInstallDirs.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\release_build_by_default;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\use_cpp_11.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\add_global_compiler_switch.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindGIF.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\check_if_neon_available.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\cmake_find_blas.txt;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckTypeSize.c.in;C:\Projects\ERT\Dlib\dlib-19.7\CMakeFiles\CheckTypeSize\SIZE_OF_VOID_PTR.c;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.6\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Projects\ERT\Dlib\dlib-19.7\dlib\config.h.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\revision.h.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\dlibConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\cmake_utils\dlib.pc.in;C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\ERT\Dlib\dlib-19.7\dlib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\base64\base64_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\bigint\bigint_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\bigint\bigint_kernel_2.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\bit_stream\bit_stream_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\entropy_decoder\entropy_decoder_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\entropy_decoder\entropy_decoder_kernel_2.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\entropy_encoder\entropy_encoder_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\entropy_encoder\entropy_encoder_kernel_2.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\md5\md5_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\tokenizer\tokenizer_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\unicode\unicode.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\data_io\image_dataset_metadata.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\data_io\mnist.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\dnn\cpu_dlib.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\dnn\tensor_tools.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\sockets\sockets_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\bsp\bsp.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\dir_nav\dir_nav_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\dir_nav\dir_nav_kernel_2.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\dir_nav\dir_nav_extensions.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\linker\linker_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\logger\extra_logger_headers.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\logger\logger_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\logger\logger_config_file.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\misc_api\misc_api_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\misc_api\misc_api_kernel_2.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\sockets\sockets_extensions.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\sockets\sockets_kernel_2.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\sockstreambuf\sockstreambuf.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\sockstreambuf\sockstreambuf_unbuffered.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\server\server_kernel.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\server\server_iostream.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\server\server_http.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\threads\multithreaded_object_extension.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\threads\threaded_object_extension.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\threads\threads_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\threads\threads_kernel_2.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\threads\threads_kernel_shared.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\threads\thread_pool_extension.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\threads\async.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\timer\timer.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\stack_trace.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\gui_widgets\fonts.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\gui_widgets\widgets.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\gui_widgets\drawable.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\gui_widgets\canvas_drawing.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\gui_widgets\style.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\gui_widgets\base_widgets.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\gui_core\gui_core_kernel_1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\gui_core\gui_core_kernel_2.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\png.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngerror.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngget.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngmem.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngpread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngrio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngrtran.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngrutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngset.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngtrans.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngwio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngwrite.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngwtran.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libpng\pngwutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\adler32.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\compress.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\crc32.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\deflate.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\gzclose.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\gzlib.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\gzread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\gzwrite.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\infback.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\inffast.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\inflate.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\inftrees.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\trees.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\uncompr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\zlib\zutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\image_loader\png_loader.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\image_saver\save_png.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcomapi.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdapimin.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdapistd.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdatasrc.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdcoefct.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdcolor.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jddctmgr.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdhuff.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdinput.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdmainct.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdmarker.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdmaster.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdmerge.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdphuff.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdpostct.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdsample.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jerror.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jidctflt.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jidctfst.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jidctint.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jidctred.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jmemmgr.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jmemnobs.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jquant1.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jquant2.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jutils.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcapimin.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jdatadst.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcparam.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcapistd.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcmarker.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcinit.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcmaster.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcdctmgr.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jccoefct.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jccolor.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jchuff.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcmainct.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcphuff.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcprepct.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jcsample.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jfdctint.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jfdctflt.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\external\libjpeg\jfdctfst.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\image_loader\jpeg_loader.cpp"  />
+    <ClCompile Include="C:\Projects\ERT\Dlib\dlib-19.7\dlib\image_saver\save_jpeg.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Projects/ERT/Dlib/dlib-19.7/ZERO_CHECK.vcxproj">
+      <Project>4A23C85E-7CE4-3532-BA53-E9228CD94B00</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
