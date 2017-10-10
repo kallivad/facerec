@@ -1,0 +1,2 @@
+/usr/bin/ar qc libamqp-cpp.a  CMakeFiles/amqp-cpp.dir/src/array.cpp.o CMakeFiles/amqp-cpp.dir/src/channelimpl.cpp.o CMakeFiles/amqp-cpp.dir/src/connectionimpl.cpp.o CMakeFiles/amqp-cpp.dir/src/deferredcancel.cpp.o CMakeFiles/amqp-cpp.dir/src/deferredconsumer.cpp.o CMakeFiles/amqp-cpp.dir/src/deferredget.cpp.o CMakeFiles/amqp-cpp.dir/src/field.cpp.o CMakeFiles/amqp-cpp.dir/src/flags.cpp.o CMakeFiles/amqp-cpp.dir/src/receivedframe.cpp.o CMakeFiles/amqp-cpp.dir/src/table.cpp.o CMakeFiles/amqp-cpp.dir/src/watchable.cpp.o
+/usr/bin/ranlib libamqp-cpp.a

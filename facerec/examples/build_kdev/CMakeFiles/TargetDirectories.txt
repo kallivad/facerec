@@ -1,0 +1,15 @@
+/home/i20/Projects/facerec/facerec/examples/build_kdev/CMakeFiles/edit_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/CMakeFiles/dnn_face_recognition_ex.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/CMakeFiles/webcam_face_pose_ex.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/CMakeFiles/poco_simple_handler.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/CMakeFiles/rebuild_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/CMakeFiles/edit_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/CMakeFiles/rebuild_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/CMakeFiles/dlib.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/CMakeFiles/edit_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/CMakeFiles/rebuild_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/CMakeFiles/amqp-cpp.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/src/CMakeFiles/edit_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/src/CMakeFiles/rebuild_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/include/CMakeFiles/edit_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/include/CMakeFiles/rebuild_cache.dir

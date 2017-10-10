@@ -1,0 +1,3 @@
+/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cuda_test_build/CMakeFiles/edit_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cuda_test_build/CMakeFiles/rebuild_cache.dir
+/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cuda_test_build/CMakeFiles/cuda_test.dir

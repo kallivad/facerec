@@ -39,11 +39,15 @@
 
 #include <dlib/dnn.h>
 #include <mysql.h>
+#include <json/json.h>
+#include <chrono>
 
 //#include "resnet/dlib_resnet.h"
 #include "npd/npddetect.h"
 #include "npd/npdmodel.h"
 #include "npd/npdtable.h"
+
+#include "SimplePocoHandler.h"
 
 using namespace dlib;
 using namespace std;
@@ -1141,8 +1145,8 @@ int main(int argc, char** argv)
 		cv::VideoCapture  cap;
 
 		capture = new cv::VideoCapture(atoi(argv[1])); //using standart system camera 
-		//capture->cv::VideoCapture::set(cv::CV_CAP_PROP_FRAME_WIDTH, 1280);
-		//capture->cv::VideoCapture::set(cv::CV_CAP_PROP_FRAME_HEIGHT, 720);
+		capture->cv::VideoCapture::set(cv::CAP_PROP_FRAME_WIDTH, 1280);
+		capture->cv::VideoCapture::set(cv::CAP_PROP_FRAME_HEIGHT, 720);
 
 		cap = *capture;
 
@@ -1296,8 +1300,7 @@ int main(int argc, char** argv)
 			}
 			
 			//cout << "Face detector(NPD) faces found:" << faces.size() << " time:" << t << "ms\n";
-
-			//ZALIPUKHA
+			
 			faces = detector(cimg);
 			if (faces.size() == 0)
 			{
@@ -1373,7 +1376,32 @@ int main(int argc, char** argv)
 			
 			//TODO: сформировать сообщение по формату 
 			//запаковать его через jsoncpp
+			Json::Value root;
+			int broadcast_id = 0; //залипуха
+			root["task_type"] = "update_video_scenes";
+			root["task_values"]["time"] = std::time(nullptr);
+			root["task_values"]["person_ids"] = Json::Value(Json::arrayValue);
+			for(int i=0; i<id_person.size(); i++)			  
+			  root["task_values"]["person_ids"].append(id_person[i]);			
+			root["task_values"]["broadcast_id"] = broadcast_id;			
+			
 			//отправить в виде сообщения rabbitMQ
+			SimplePocoHandler handler("195.211.7.218", 50072);
+			AMQP::Connection connection(&handler, AMQP::Login("video", "EcZupYb"), "/");
+			AMQP::Channel channel(&connection);
+			
+			channel.onReady([&]()
+			{
+			  if(handler.connected())
+			    {
+			      //channel.publish("", "hello", "Hello World!");
+			      //std::cout << " [x] Sent 'Hello World!'" << std::endl;
+			      std::string encoding(root.get("encoding", "UTF-8" ).asString());
+			      channel.publish("","",encoding);
+			      handler.quit();
+			    }
+			});			
+			handler.loop();
 			
 			win_faces.set_title("Detected faces");
 			win_faces.set_image(tile_images(face_chips));

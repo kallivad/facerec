@@ -1,4 +1,4 @@
-# Install script for directory: /home/i20/Projects/facerec/dlib-19.7/examples
+# Install script for directory: /home/i20/Projects/facerec/facerec/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/i20/Projects/facerec/dlib-19.7/examples/build_kdev/dlib_build/cmake_install.cmake")
+  include("/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cmake_install.cmake")
+  include("/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/i20/Projects/facerec/dlib-19.7/examples/build_kdev/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/i20/Projects/facerec/facerec/examples/build_kdev/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,0 +1,28 @@
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cudnn_test_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9fd7b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9fd7b.dir/build.make CMakeFiles/cmTC_9fd7b.dir/build
+make[1]: Entering directory '/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cudnn_test_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9fd7b.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_9fd7b.dir/CheckIncludeFile.c.o   -c /home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cudnn_test_build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9fd7b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9fd7b.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_9fd7b.dir/CheckIncludeFile.c.o  -o cmTC_9fd7b -rdynamic 
+make[1]: Leaving directory '/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cudnn_test_build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cudnn_test_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_acdc3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_acdc3.dir/build.make CMakeFiles/cmTC_acdc3.dir/build
+make[1]: Entering directory '/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cudnn_test_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_acdc3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_acdc3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_acdc3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acdc3.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_acdc3.dir/CheckFunctionExists.c.o  -o cmTC_acdc3 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cudnn_test_build/CMakeFiles/CMakeTmp'
+
+

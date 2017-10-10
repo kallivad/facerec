@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpoco_simple_handler.a  CMakeFiles/poco_simple_handler.dir/SimplePocoHandler.cpp.o
+/usr/bin/ranlib libpoco_simple_handler.a
