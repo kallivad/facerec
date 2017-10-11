@@ -217,7 +217,7 @@ int main(int argc, char** argv) try
 	//TODO: Выдёргивать чип из входного изображения используя box информцию,а не через dlib
 	cv::Mat img_avatar = dlib::toMat(dlib_avatar);
 	//opencv 2.4.9 валиться тут!!!
-	//cv::cvtColor(img_avatar, img_avatar, cv::COLOR_RGB2BGR);
+	cv::cvtColor(img_avatar, img_avatar, cv::COLOR_RGB2BGR);
 	std::string filename("face_avatar_");
 	std::string id = std::to_string(id_person);
 	filename = filename + id + std::string(".jpg");
