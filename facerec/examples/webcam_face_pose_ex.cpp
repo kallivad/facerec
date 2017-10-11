@@ -1166,7 +1166,7 @@ return faces;
 int main(int argc, char** argv)
 {
 	double scalef = 0.5; //0.3;       //фактор сужения картинки для поиска лица мин. размера
-	int score_thresh = 45;     // //100; // 50;  //ограничивающее число для локализации face box
+	int score_thresh = 60;     // //100; // 50;  //ограничивающее число для локализации face box
 						     //score число очков, набранное алгоритмом NPD
 	double scale_bbox = 1.35;  //эффективн. размер bbox для лучшего landmark fitting
 
@@ -1291,7 +1291,24 @@ int main(int argc, char** argv)
 	 double fps = 10.0; //plaseholder
 	 int frame_count = 0;
 	 double frame_time = (double)cv::getTickCount();
-        // Grab and process frames until the main window is closed by the user.
+        
+	 //отправить в виде сообщения rabbitMQ
+	 SimplePocoHandler handler("195.211.7.218", 50072);
+	 AMQP::Connection amqp_connection(&handler, AMQP::Login("video-rec", "EcZupYb"), "/");
+	 AMQP::Channel channel(&amqp_connection);
+	 
+	 /*
+	 if(!handler.connected())
+	 {
+	   cout << "Unable to connect to rabbitmq channel.. exiting" << endl;
+	   return -1;	   
+	 }*/
+
+	 cout << "Connected to video-rec channel" << endl;
+
+	 int broadcast_id = atoi(argv[2]);
+	 
+	 // Grab and process frames until the main window is closed by the user.
         while(!win.is_closed())
         {
             // Grab a frame
@@ -1326,6 +1343,8 @@ int main(int argc, char** argv)
 				std::string notifier("No one known face");
 				cv::Point textPoint(10, 50);
 				cv::putText(in, notifier, textPoint, cv::FONT_HERSHEY_PLAIN, 1.5, cv::Scalar::all(250), 2, 8);
+				
+				//need to publish even waste string!!!
 				
 				win.clear_overlay();
 				win.set_image(cimg);
@@ -1395,45 +1414,43 @@ int main(int argc, char** argv)
 				std::string notifier("NO ONE KNOWN FACE...");
 				cv::Point textPoint(10, 50);
 				cv::putText(in, notifier, textPoint, cv::FONT_HERSHEY_PLAIN, 1.5, cv::Scalar::all(150), 2, 8);
-				win.clear_overlay();
-				win.set_image(cimg);
-				continue;
+				
+				//win.clear_overlay();
+				//win.set_image(cimg);
+				//continue;
 			}
 			
 			//TODO: сформировать сообщение по формату 
 			//запаковать его через jsoncpp
 			Json::Value root;
-			int broadcast_id = atoi(argv[2]);
 			root["task_type"] = "update_video_scenes";
 			root["task_values"]["time"] = std::time(nullptr);
 			root["task_values"]["person_ids"] = Json::Value(Json::arrayValue);
 			for(int i=0; i<id_person.size(); i++)			  
 			  root["task_values"]["person_ids"].append(id_person[i]);			
 			root["task_values"]["broadcast_id"] = broadcast_id;			
-			
-			//отправить в виде сообщения rabbitMQ
-			SimplePocoHandler handler("195.211.7.218", 50072);
-			AMQP::Connection connection(&handler, AMQP::Login("video", "EcZupYb"), "/");
-			AMQP::Channel channel(&connection);
-			
+						
+			//need to publish even waisted array
 			if(frame_count%10 == 0)
 			{
-			  cout << "AMQP message" << endl;
-			  channel.onReady([&]()
-			    {
-			    if(handler.connected())
+			  cout << "AMQP message" << endl;			  
+			  
+			  //SimplePocoHandler handler("195.211.7.218", 50072);
+			  //AMQP::Connection amqp_connection(&handler, AMQP::Login("video-rec", "EcZupYb"), "/");
+			  //AMQP::Channel channel(&amqp_connection);
+
+			  channel.declareExchange("common_exchange",AMQP::direct).onSuccess([&]{
+			      if(handler.connected())
 			      {
-			      //std::string encoding(root.get("encoding", "UTF-8" ).asString());
-			      //cout << encoding.c_str() << endl;
-			      Json::FastWriter fastWriter;
-			      std::string output = fastWriter.write(root);
-			      cout << output << endl;
-			      //cout << root << endl;			      
-			      channel.publish("","",output);
-			      handler.quit();
-			      }
-			  });			
-			  handler.loop();
+				Json::FastWriter fastWriter;
+				std::string output = fastWriter.write(root);
+				cout << output << endl;
+				//cout << root << endl;
+				channel.publish("common_exchange","update_video_scenes", output);
+				//handler.quit();
+			       }
+			      });
+			 //handler.loop();
 			}
 			
 			win_faces.set_title("Detected faces");
@@ -1445,14 +1462,15 @@ int main(int argc, char** argv)
             win.add_overlay(render_face_detections(shapes));
 	    
 	    frame_count++;	    
-	    if ( frame_count == 100)
+	    if ( frame_count == 60)
             {
                 frame_time = ((double)cv::getTickCount() - frame_time)/cv::getTickFrequency();
-                fps = 100.0/frame_time;
+                fps = 60.0/frame_time;
                 frame_count = 0;
 	    }
         }
-
+		handler.quit();
+		handler.loop();
 		mysql_close(connection);
 		delete capture;
 	}
