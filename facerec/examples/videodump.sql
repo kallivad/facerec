@@ -119,7 +119,7 @@ DROP TABLE IF EXISTS `person`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `person` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `face_hash` varchar(1024) COLLATE utf8_unicode_ci NOT NULL,
+  `face_hash` varchar(3000) COLLATE utf8_unicode_ci NOT NULL,
   `voice_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `avatar` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,

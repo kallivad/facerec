@@ -35,6 +35,9 @@
 //#include <my_global.h>
 #include <mysql.h>
 
+#include <json/json.h>
+#include <chrono>
+
 using namespace dlib;
 using namespace std;
 
@@ -111,7 +114,17 @@ int main(int argc, char** argv) try
 	anet_type net;
 	dlib::deserialize("dlib_face_recognition_resnet_model_v1.dat") >> net;
 
-	cv::VideoCapture  cap(id_camera);
+	//cv::VideoCapture  cap(id_camera);	
+	cv::VideoCapture  cap;	
+	cv::VideoCapture* capture;
+	
+	if(argc < 5)
+		    capture = new cv::VideoCapture(atoi(argv[1])); //using standart system camera 
+		else
+		    capture = new cv::VideoCapture(argv[4]);
+	
+	cap = *capture;
+
 	cv::Mat in, frame;	
 
 	int frame_count = 0;
@@ -224,6 +237,7 @@ int main(int argc, char** argv) try
 	cv::imwrite(filename, img_avatar);
 
 	//saving descriptor to a file
+	/*
 	if (debug_mode_flag) 
 	{
 		std::string id = std::to_string(id_person);
@@ -237,14 +251,76 @@ int main(int argc, char** argv) try
 		}
 		dlib::serialize(res_descriptor, file);
 		file.close();
-	}
+	}*/
 	
 	//saving descriptor to a MySQL DB
 	std::stringbuf buf;
 	std::ostream descriptor_stream(&buf);
+	//Serialization with Dlib
 	dlib::serialize(res_descriptor, descriptor_stream);
 	
-	std::string face_hash = buf.str();	
+	//Serialization with Jsoncpp
+	Json::Value root;
+	root["task_type"] = "descriptor_data";
+	root["descriptor_v"] = Json::Value(Json::arrayValue);
+	for(int i=0; i<res_descriptor.size(); i++)
+	   root["descriptor_v"].append(res_descriptor(0, i));
+	
+	cout << root <<endl;
+	
+	Json::FastWriter fastWriter;
+	std::string json_string = fastWriter.write(root);
+	
+	//test for unparsing
+/*
+	Json::Value test_root;
+	Json::Reader reader;
+	bool parsingSuccessful = reader.parse( json_string.c_str(), test_root );     //parse process
+	if ( !parsingSuccessful )
+	{
+	  std::cout  << "Failed to parse" << reader.getFormattedErrorMessages();
+          //return 0;
+	}	
+	
+	std::cout << test_root.get("task_type", " " ).asString() << std::endl;
+	//std::cout << root.get("descriptor_v", " ") << std::endl;
+	
+	for(int i=0; i<128; i++)
+	{
+	  std::string x_str = test_root["descriptor_v"][i].asString();
+	  float x=atof(x_str.c_str());
+	  std::cout << x<< endl;
+	  //std::cout << test_root["descriptor_v"][i] << endl;
+	}
+*/	
+	if (debug_mode_flag) 
+	{
+		std::string id = std::to_string(id_person);
+		std::string filename("face_descriptor_");
+		filename = filename + id + std::string(".bin");
+		//in debug mode we are saving descriptor into a file
+		std::ofstream file(filename.c_str());
+		//std::ofstream file;
+		//file.open(filename.c_str(), ios::out | ios::binary);
+		
+		//if (!file.open(filename.c_str(), ios::out | ios::binary)) {  // если файл не открыт
+		if (!file.is_open()){  // если файл не открыт
+		    cout << "Unable to open: " << filename.c_str() << "for writing \n";
+		   return -1;
+		}
+		
+		//dlib::serialize(res_descriptor, file);
+		//Json::StyledWriter styledWriter;
+		//file << styledWriter.write(root);
+		Json::FastWriter fastWriter;
+		std::string output = fastWriter.write(root);
+		file.write(output.c_str(), sizeof(char)*output.size());
+		file.close();
+	}
+
+	
+	//std::string face_hash = buf.str();		
+	std::string face_hash = json_string;
 	std::string insert_query;  
 	//insert_query = "insert into person(id, face_hash, voice_hash, avatar,name) values('" + id + "','" + buf.c_str() + "','cda','aaa','uasya');";
 	
@@ -258,7 +334,7 @@ int main(int argc, char** argv) try
 	char query[st_len + 2*size+1]; 
 	int len = snprintf(query, st_len + 2*size+1, st, chunk ,id_person);
 	
-	cout << "Inserting into database len=" << st_len << " face_hash: " << face_hash.c_str() <<endl;
+	//cout << "Inserting into database len=" << st_len << " face_hash: " << face_hash.c_str() <<endl;
 	
 	if (mysql_query(connection, query)) 
 	{
