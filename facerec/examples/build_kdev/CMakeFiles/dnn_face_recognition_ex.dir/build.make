@@ -116,7 +116,6 @@ dnn_face_recognition_ex: /usr/local/cuda/lib64/libcublas.so
 dnn_face_recognition_ex: /usr/lib/x86_64-linux-gnu/libcudnn.so
 dnn_face_recognition_ex: /usr/local/cuda/lib64/libcurand.so
 dnn_face_recognition_ex: /usr/local/cuda/lib64/libcusolver.so
-dnn_face_recognition_ex: /usr/lib/x86_64-linux-gnu/libsqlite3.so
 dnn_face_recognition_ex: /home/i20/Projects/opencv-3.3.0/build/lib/libopencv_calib3d.so.3.3.0
 dnn_face_recognition_ex: /home/i20/Projects/opencv-3.3.0/build/lib/libopencv_features2d.so.3.3.0
 dnn_face_recognition_ex: /home/i20/Projects/opencv-3.3.0/build/lib/libopencv_flann.so.3.3.0

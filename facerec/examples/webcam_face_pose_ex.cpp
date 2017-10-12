@@ -1435,7 +1435,7 @@ int main(int argc, char** argv)
 					int x1 = faces[j].right();
 					int y1 = faces[j].bottom();
 
-					if (L < 0.6)
+					if (L < 0.5)
 					{
 						detected_idx = i; //saving in_descriptor number
 						//сохранить detected_id в массиве обнаруженных idшников

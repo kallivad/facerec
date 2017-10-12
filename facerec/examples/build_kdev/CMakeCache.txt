@@ -366,7 +366,7 @@ DLIB_ISO_CPP_ONLY:BOOL=OFF
 DLIB_JPEG_SUPPORT:BOOL=ON
 
 //Disable this if you don't want to link against sqlite3
-DLIB_LINK_WITH_SQLITE3:BOOL=ON
+DLIB_LINK_WITH_SQLITE3:BOOL=OFF
 
 //Enable this if you don't want to compile any of the dlib GUI
 // code
@@ -684,7 +684,7 @@ cusolver:FILEPATH=/usr/local/cuda/lib64/libcusolver.so
 dlib_BINARY_DIR:STATIC=/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build
 
 //Dependencies for the target
-dlib_LIB_DEPENDS:STATIC=general;/usr/local/cuda/lib64/libcudart_static.a;general;-lpthread;general;dl;general;/usr/lib/x86_64-linux-gnu/librt.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libnsl.so;general;/usr/lib/x86_64-linux-gnu/libSM.so;general;/usr/lib/x86_64-linux-gnu/libICE.so;general;/usr/lib/x86_64-linux-gnu/libX11.so;general;/usr/lib/x86_64-linux-gnu/libXext.so;general;/usr/lib/x86_64-linux-gnu/libpng.so;general;/usr/lib/x86_64-linux-gnu/libz.so;general;/usr/lib/x86_64-linux-gnu/libjpeg.so;general;/usr/lib/libopenblas.so;general;/usr/local/cuda/lib64/libcublas.so;general;/usr/lib/x86_64-linux-gnu/libcudnn.so;general;/usr/local/cuda/lib64/libcurand.so;general;/usr/local/cuda/lib64/libcusolver.so;general;-fopenmp;general;/usr/lib/x86_64-linux-gnu/libsqlite3.so;
+dlib_LIB_DEPENDS:STATIC=general;/usr/local/cuda/lib64/libcudart_static.a;general;-lpthread;general;dl;general;/usr/lib/x86_64-linux-gnu/librt.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libnsl.so;general;/usr/lib/x86_64-linux-gnu/libSM.so;general;/usr/lib/x86_64-linux-gnu/libICE.so;general;/usr/lib/x86_64-linux-gnu/libX11.so;general;/usr/lib/x86_64-linux-gnu/libXext.so;general;/usr/lib/x86_64-linux-gnu/libpng.so;general;/usr/lib/x86_64-linux-gnu/libz.so;general;/usr/lib/x86_64-linux-gnu/libjpeg.so;general;/usr/lib/libopenblas.so;general;/usr/local/cuda/lib64/libcublas.so;general;/usr/lib/x86_64-linux-gnu/libcudnn.so;general;/usr/local/cuda/lib64/libcurand.so;general;/usr/local/cuda/lib64/libcusolver.so;general;-fopenmp;
 
 //Value Computed by CMake
 dlib_SOURCE_DIR:STATIC=/home/i20/Projects/facerec/facerec/dlib
@@ -899,7 +899,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

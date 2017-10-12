@@ -35,7 +35,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/cmake_install.cmake")
-  include("/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/cmake_install.cmake")
 
 endif()
 

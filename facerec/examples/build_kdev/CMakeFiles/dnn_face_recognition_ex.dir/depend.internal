@@ -841,3 +841,10 @@ CMakeFiles/dnn_face_recognition_ex.dir/dnn_face_recognition_ex.cpp.o
  /usr/include/mysql/mysql_time.h
  /usr/include/mysql/mysql_version.h
  /usr/include/mysql/typelib.h
+ /usr/local/include/json/autolink.h
+ /usr/local/include/json/features.h
+ /usr/local/include/json/forwards.h
+ /usr/local/include/json/json.h
+ /usr/local/include/json/reader.h
+ /usr/local/include/json/value.h
+ /usr/local/include/json/writer.h

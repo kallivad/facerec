@@ -137,19 +137,6 @@ webcam_face_pose_ex/fast:
 .PHONY : webcam_face_pose_ex/fast
 
 #=============================================================================
-# Target rules for targets named poco_simple_handler
-
-# Build rule for target.
-poco_simple_handler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 poco_simple_handler
-.PHONY : poco_simple_handler
-
-# fast build rule for target.
-poco_simple_handler/fast:
-	$(MAKE) -f CMakeFiles/poco_simple_handler.dir/build.make CMakeFiles/poco_simple_handler.dir/build
-.PHONY : poco_simple_handler/fast
-
-#=============================================================================
 # Target rules for targets named dlib
 
 # Build rule for target.
@@ -161,46 +148,6 @@ dlib: cmake_check_build_system
 dlib/fast:
 	$(MAKE) -f dlib_build/CMakeFiles/dlib.dir/build.make dlib_build/CMakeFiles/dlib.dir/build
 .PHONY : dlib/fast
-
-#=============================================================================
-# Target rules for targets named amqp-cpp
-
-# Build rule for target.
-amqp-cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 amqp-cpp
-.PHONY : amqp-cpp
-
-# fast build rule for target.
-amqp-cpp/fast:
-	$(MAKE) -f AMQP-CPP-2.1.4/CMakeFiles/amqp-cpp.dir/build.make AMQP-CPP-2.1.4/CMakeFiles/amqp-cpp.dir/build
-.PHONY : amqp-cpp/fast
-
-SimplePocoHandler.o: SimplePocoHandler.cpp.o
-
-.PHONY : SimplePocoHandler.o
-
-# target to build an object file
-SimplePocoHandler.cpp.o:
-	$(MAKE) -f CMakeFiles/poco_simple_handler.dir/build.make CMakeFiles/poco_simple_handler.dir/SimplePocoHandler.cpp.o
-.PHONY : SimplePocoHandler.cpp.o
-
-SimplePocoHandler.i: SimplePocoHandler.cpp.i
-
-.PHONY : SimplePocoHandler.i
-
-# target to preprocess a source file
-SimplePocoHandler.cpp.i:
-	$(MAKE) -f CMakeFiles/poco_simple_handler.dir/build.make CMakeFiles/poco_simple_handler.dir/SimplePocoHandler.cpp.i
-.PHONY : SimplePocoHandler.cpp.i
-
-SimplePocoHandler.s: SimplePocoHandler.cpp.s
-
-.PHONY : SimplePocoHandler.s
-
-# target to generate assembly for a file
-SimplePocoHandler.cpp.s:
-	$(MAKE) -f CMakeFiles/poco_simple_handler.dir/build.make CMakeFiles/poco_simple_handler.dir/SimplePocoHandler.cpp.s
-.PHONY : SimplePocoHandler.cpp.s
 
 dnn_face_recognition_ex.o: dnn_face_recognition_ex.cpp.o
 
@@ -263,15 +210,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... dnn_face_recognition_ex"
 	@echo "... webcam_face_pose_ex"
-	@echo "... poco_simple_handler"
-	@echo "... rebuild_cache"
 	@echo "... dlib"
-	@echo "... amqp-cpp"
-	@echo "... SimplePocoHandler.o"
-	@echo "... SimplePocoHandler.i"
-	@echo "... SimplePocoHandler.s"
 	@echo "... dnn_face_recognition_ex.o"
 	@echo "... dnn_face_recognition_ex.i"
 	@echo "... dnn_face_recognition_ex.s"

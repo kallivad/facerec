@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wreturn-type -O3 -DNDEBUG   -mavx -DDLIB_JPEG_SUPPORT -DDLIB_USE_B
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr -I/usr/local/cuda/include 
+CXX_INCLUDES = -I/usr/local/cuda/include 
 

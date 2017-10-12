@@ -14,10 +14,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/i20/Projects/facerec/facerec/dlib/cmake_utils/release_build_by_default"
   "/home/i20/Projects/facerec/facerec/dlib/cmake_utils/test_for_cudnn/find_cudnn.txt"
   "/home/i20/Projects/facerec/facerec/dlib/cmake_utils/use_cpp_11.cmake"
-  "../AMQP-CPP-2.1.4/CMakeLists.txt"
-  "../AMQP-CPP-2.1.4/include/CMakeLists.txt"
-  "../AMQP-CPP-2.1.4/set_cxx_norm.cmake"
-  "../AMQP-CPP-2.1.4/src/CMakeLists.txt"
   "../CMakeLists.txt"
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"
@@ -80,16 +76,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "dlib_build/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "AMQP-CPP-2.1.4/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "AMQP-CPP-2.1.4/src/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "AMQP-CPP-2.1.4/include/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/dnn_face_recognition_ex.dir/DependInfo.cmake"
   "CMakeFiles/webcam_face_pose_ex.dir/DependInfo.cmake"
-  "CMakeFiles/poco_simple_handler.dir/DependInfo.cmake"
   "dlib_build/CMakeFiles/dlib.dir/DependInfo.cmake"
-  "AMQP-CPP-2.1.4/CMakeFiles/amqp-cpp.dir/DependInfo.cmake"
   )

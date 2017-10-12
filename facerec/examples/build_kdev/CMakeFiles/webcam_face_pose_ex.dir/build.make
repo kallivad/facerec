@@ -101,8 +101,6 @@ webcam_face_pose_ex: /home/i20/Projects/opencv-3.3.0/build/lib/libopencv_videost
 webcam_face_pose_ex: /usr/lib/x86_64-linux-gnu/libmysqlclient.so
 webcam_face_pose_ex: /usr/local/lib/libjsoncpp.so
 webcam_face_pose_ex: /usr/lib/x86_64-linux-gnu/librabbitmq.so
-webcam_face_pose_ex: libpoco_simple_handler.a
-webcam_face_pose_ex: AMQP-CPP-2.1.4/libamqp-cpp.a
 webcam_face_pose_ex: /usr/local/cuda/lib64/libcudart_static.a
 webcam_face_pose_ex: /usr/lib/x86_64-linux-gnu/librt.so
 webcam_face_pose_ex: /usr/lib/x86_64-linux-gnu/librt.so
@@ -119,7 +117,6 @@ webcam_face_pose_ex: /usr/local/cuda/lib64/libcublas.so
 webcam_face_pose_ex: /usr/lib/x86_64-linux-gnu/libcudnn.so
 webcam_face_pose_ex: /usr/local/cuda/lib64/libcurand.so
 webcam_face_pose_ex: /usr/local/cuda/lib64/libcusolver.so
-webcam_face_pose_ex: /usr/lib/x86_64-linux-gnu/libsqlite3.so
 webcam_face_pose_ex: /home/i20/Projects/opencv-3.3.0/build/lib/libopencv_calib3d.so.3.3.0
 webcam_face_pose_ex: /home/i20/Projects/opencv-3.3.0/build/lib/libopencv_features2d.so.3.3.0
 webcam_face_pose_ex: /home/i20/Projects/opencv-3.3.0/build/lib/libopencv_flann.so.3.3.0

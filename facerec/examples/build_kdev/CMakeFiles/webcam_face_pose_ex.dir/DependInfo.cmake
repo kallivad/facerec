@@ -16,7 +16,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../AMQP-CPP-2.1.4"
   "/usr/include/mysql"
   "/home/i20/Projects/opencv-3.3.0/build"
   "/home/i20/Projects/opencv-3.3.0/include"
@@ -41,14 +40,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/i20/Projects/opencv-3.3.0/modules/videostab/include"
   "/usr/local/include"
   "/home/i20/Projects/facerec/facerec/dlib/.."
-  "/usr"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/i20/Projects/facerec/facerec/examples/build_kdev/dlib_build/CMakeFiles/dlib.dir/DependInfo.cmake"
-  "/home/i20/Projects/facerec/facerec/examples/build_kdev/CMakeFiles/poco_simple_handler.dir/DependInfo.cmake"
-  "/home/i20/Projects/facerec/facerec/examples/build_kdev/AMQP-CPP-2.1.4/CMakeFiles/amqp-cpp.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
