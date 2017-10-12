@@ -1293,9 +1293,9 @@ int main(int argc, char** argv)
 	 double frame_time = (double)cv::getTickCount();
         
 	 //отправить в виде сообщения rabbitMQ
-	 SimplePocoHandler handler("195.211.7.218", 50072);
-	 AMQP::Connection amqp_connection(&handler, AMQP::Login("video-rec", "EcZupYb"), "/");
-	 AMQP::Channel channel(&amqp_connection);
+	 //SimplePocoHandler handler("195.211.7.218", 50072);
+	 //AMQP::Connection amqp_connection(&handler, AMQP::Login("video-rec", "EcZupYb"), "/");
+	 //AMQP::Channel channel(&amqp_connection);
 	 
 	 /*
 	 if(!handler.connected())
@@ -1435,9 +1435,9 @@ int main(int argc, char** argv)
 			{
 			  cout << "AMQP message" << endl;			  
 			  
-			  //SimplePocoHandler handler("195.211.7.218", 50072);
-			  //AMQP::Connection amqp_connection(&handler, AMQP::Login("video-rec", "EcZupYb"), "/");
-			  //AMQP::Channel channel(&amqp_connection);
+			  SimplePocoHandler handler("195.211.7.218", 50072);
+			  AMQP::Connection amqp_connection(&handler, AMQP::Login("video-rec", "EcZupYb"), "/");
+			  AMQP::Channel channel(&amqp_connection);
 
 			  channel.declareExchange("common_exchange",AMQP::direct).onSuccess([&]{
 			      if(handler.connected())
@@ -1447,10 +1447,10 @@ int main(int argc, char** argv)
 				cout << output << endl;
 				//cout << root << endl;
 				channel.publish("common_exchange","update_video_scenes", output);
-				//handler.quit();
+				handler.quit();
 			       }
 			      });
-			 //handler.loop();
+			 handler.loop();
 			}
 			
 			win_faces.set_title("Detected faces");
@@ -1469,8 +1469,6 @@ int main(int argc, char** argv)
                 frame_count = 0;
 	    }
         }
-		handler.quit();
-		handler.loop();
 		mysql_close(connection);
 		delete capture;
 	}
