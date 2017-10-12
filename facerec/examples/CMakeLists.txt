@@ -120,11 +120,15 @@ endmacro()
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ".")
 
-include_directories(AMQP-CPP-2.1.4)
-add_subdirectory(AMQP-CPP-2.1.4)
+#include_directories(AMQP-CPP-2.1.4)
+#add_subdirectory(AMQP-CPP-2.1.4)
 
-add_library(poco_simple_handler SimplePocoHandler.cpp SimplePocoHandler.h)
-target_link_libraries(poco_simple_handler PocoNet PocoFoundation)
+#add_library(poco_simple_handler SimplePocoHandler.cpp SimplePocoHandler.h)
+#target_link_libraries(poco_simple_handler PocoNet PocoFoundation)
+
+#include_directories(amqpcpp)
+#add_subdirectory(amqpcpp)
+
 
 if (DLIB_NO_GUI_SUPPORT)
    message("No GUI support, so we won't build the webcam_face_pose_ex example.")
@@ -143,7 +147,8 @@ link_libraries(${JSONCPP_LIBRARIES})
       include_directories(${JSONCPP_INCLUDE_DIR})
       include_directories(${RABBITMQ_HEADERS})
       add_executable(webcam_face_pose_ex webcam_face_pose_ex.cpp)
-      target_link_libraries(webcam_face_pose_ex dlib::dlib ${OpenCV_LIBS} ${MYSQL_LIB} ${JSONCPP_LIBRARY} ${RABBITMQ_LIBRARIES} poco_simple_handler amqp-cpp)
+#      target_link_libraries(webcam_face_pose_ex dlib::dlib ${OpenCV_LIBS} ${MYSQL_LIB} ${JSONCPP_LIBRARY} ${RABBITMQ_LIBRARIES} poco_simple_handler amqp-cpp)
+      target_link_libraries(webcam_face_pose_ex dlib::dlib ${OpenCV_LIBS} ${MYSQL_LIB} ${JSONCPP_LIBRARY} amqpcpp ssl crypto  ${RABBITMQ_LIBRARIES} )
       add_executable(dnn_face_recognition_ex dnn_face_recognition_ex.cpp)
       target_link_libraries(dnn_face_recognition_ex dlib::dlib ${OpenCV_LIBS} ${MYSQL_LIB} ${JSONCPP_LIBRARY})
    else()

@@ -47,7 +47,9 @@
 #include "npd/npdmodel.h"
 #include "npd/npdtable.h"
 
-#include "SimplePocoHandler.h"
+//#include "SimplePocoHandler.h"
+//#include "AMQPcpp.h"
+#include <AMQPcpp.h>
 
 using namespace dlib;
 using namespace std;
@@ -1292,21 +1294,27 @@ int main(int argc, char** argv)
 	 int frame_count = 0;
 	 double frame_time = (double)cv::getTickCount();
         
-	 //отправить в виде сообщения rabbitMQ
-	 //SimplePocoHandler handler("195.211.7.218", 50072);
-	 //AMQP::Connection amqp_connection(&handler, AMQP::Login("video-rec", "EcZupYb"), "/");
-	 //AMQP::Channel channel(&amqp_connection);
-	 
-	 /*
-	 if(!handler.connected())
-	 {
-	   cout << "Unable to connect to rabbitmq channel.. exiting" << endl;
-	   return -1;	   
-	 }*/
-
 	 cout << "Connected to video-rec channel" << endl;
 
 	 int broadcast_id = atoi(argv[2]);
+	 
+	AMQP amqp("video-rec:EcZupYb@195.211.7.218:50072"); // all connect string
+	cout << "1" << endl;
+
+	AMQPExchange * ex = amqp.createExchange("common_exchange");
+	ex->Declare("common_exchange", "direct");		
+	AMQPQueue * qu2 = amqp.createQueue();
+	cout << "2" << endl;
+		
+	qu2->Declare("update_video_scenes", AMQP_DURABLE);
+	qu2->Bind( "common_exchange", "");		
+	cout << "3" << endl;
+
+	ex->setHeader("Delivery-mode", 2);
+	ex->setHeader("Content-type", "text/text");
+	ex->setHeader("Content-encoding", "UTF-8");
+	cout << "4" << endl;
+
 	 
 	 // Grab and process frames until the main window is closed by the user.
         while(!win.is_closed())
@@ -1346,9 +1354,9 @@ int main(int argc, char** argv)
 				
 				//need to publish even waste string!!!
 				
-				win.clear_overlay();
-				win.set_image(cimg);
-				continue;
+				//win.clear_overlay();
+				//win.set_image(cimg);
+				//continue;
 			}
 
 
@@ -1430,7 +1438,8 @@ int main(int argc, char** argv)
 			  root["task_values"]["person_ids"].append(id_person[i]);			
 			root["task_values"]["broadcast_id"] = broadcast_id;			
 						
-			//need to publish even waisted array
+			//With amqp-cpp 2.1 works slowly
+			/*
 			if(frame_count%10 == 0)
 			{
 			  cout << "AMQP message" << endl;			  
@@ -1451,7 +1460,16 @@ int main(int argc, char** argv)
 			       }
 			      });
 			 handler.loop();
-			}
+			}*/
+			
+			//amqpcpp another wrapper
+			if(frame_count%10 == 0)
+			{
+			  cout << "AMQP message" << endl;			  
+			  Json::FastWriter fastWriter;
+			  std::string output = fastWriter.write(root);
+			  ex->Publish(output.c_str(), "");			  
+			}			
 			
 			win_faces.set_title("Detected faces");
 			win_faces.set_image(tile_images(face_chips));
@@ -1471,9 +1489,10 @@ int main(int argc, char** argv)
         }
 		mysql_close(connection);
 		delete capture;
+		return 0;
 	}
     
-	catch(serialization_error& e)
+  catch(serialization_error& e)
     {
         cout << "Deserialization ERROR!" << endl;
         //cout << "You can get it from the following URL: " << endl;
